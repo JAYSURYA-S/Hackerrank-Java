@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        float f = sc.nextFloat();   
+        int sq = sc.nextInt();      
+        int base = sc.nextInt();    
+        int power = sc.nextInt();   
+        System.out.println((int) Math.floor(f));
+        System.out.println((int) Math.ceil(f));
+        System.out.println((int) Math.sqrt(sq));
+        System.out.println((int) Math.pow(base, power));
+    }
+}

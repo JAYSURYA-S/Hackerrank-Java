@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int digit;
+        
+        while (n >= 10) {
+            int sum = 0;   // Reset sum here
+            
+            while (n != 0) {
+                digit = n % 10;
+                sum = sum + digit;
+                n = n / 10;
+            }
+            
+            n = sum;
+        }
+        
+        System.out.println(n);
+    }
+}

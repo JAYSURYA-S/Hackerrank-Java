@@ -1,0 +1,35 @@
+import java.util.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        char path = sc.next().charAt(0);  
+        int time = sc.nextInt();         
+        int price = 0;
+        if (time < 12) {
+            if (path == 'A')
+            {
+                price = 25;
+            } else if (path == 'B')
+            {
+                price = 20;
+            } else if (path == 'C')
+            {
+                price = 15;
+            }
+        } else {
+            if (path == 'A') 
+            {
+                price = 30;
+            } else if (path == 'B'
+                      ) {
+                price = 25;
+            } else if (path == 'C')
+            {
+                price = 20;
+            }
+        }
+
+        System.out.println(price);
+    }
+}

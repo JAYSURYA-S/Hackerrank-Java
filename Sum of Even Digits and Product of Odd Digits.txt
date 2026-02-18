@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+
+        int sumEven = 0;
+        int productOdd = 1;
+
+        while (n != 0) {
+            int digit = n % 10;
+
+            if (digit % 2 == 0) {
+                sumEven += digit;
+            } else {
+                productOdd *= digit;
+            }
+
+            n = n / 10;
+        }
+
+        System.out.print(sumEven + " " + productOdd);
+    }
+}

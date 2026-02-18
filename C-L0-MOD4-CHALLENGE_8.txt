@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();  
+        if (n <= 0) {
+            System.out.println("Not a adam number");
+            return;
+        }     
+        int rev1 = 0;
+        int temp = n;
+        while (temp != 0) {
+            int digit = temp % 10;
+            rev1 = rev1 * 10 + digit;
+            temp /= 10;
+        }     
+        int square = n * n;   
+        int revSquare = 0;
+        temp = square;
+        while (temp != 0) {
+            int digit = temp % 10;
+            revSquare = revSquare * 10 + digit;
+            temp /= 10;
+        }
+        int rev1Square = rev1 * rev1;
+        if (revSquare == rev1Square) {
+            System.out.println("Adam Number");
+        } else {
+            System.out.println("Not a adam number");
+        }
+    }
+}

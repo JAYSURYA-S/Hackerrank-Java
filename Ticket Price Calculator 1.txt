@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int age = sc.nextInt();
+        String day = sc.next().toLowerCase();
+        int amt = 0;
+        switch (day) {
+            case "saturday":
+                if (age < 12)
+                    amt = 80;
+                else if (age <= 59)
+                    amt = 120;
+                else
+                    amt = 70;
+                break;
+            case "sunday":
+                if (age < 12)
+                    amt = 80;
+                else if (age <= 59)
+                    amt = 120;
+                else
+                    amt = 70;
+                break;
+            default:
+                if (age < 12)
+                    amt = 100;
+                else if (age <= 59)
+                    amt = 150;
+                else
+                    amt = 90;
+        }
+
+        System.out.println(amt);
+    }
+}

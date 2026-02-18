@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner ch = new Scanner(System.in);
+        int a = ch.nextInt();
+        int total = 0;
+        if(a<=100){
+            total = a* 5;
+            System.out.println(total);
+        }
+        else if(a>100 && a<=200){
+            total = 500;
+            a = a - 100;
+            total = total+(a*7);
+            System.out.println(total);
+        }
+        else{
+            total = 1200;
+            a = a - 200;
+            total = total + (a * 10);
+            System.out.println(total);
+        }
+    }
+}

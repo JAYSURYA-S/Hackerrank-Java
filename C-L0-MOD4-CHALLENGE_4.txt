@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+            long num = sc.nextLong();
+            long n = num;
+            long rev = 0;
+            long digit;
+            while(n > 0) {
+                digit = n % 10;
+                rev = rev * 10 + digit;
+                n = n / 10;
+            }
+            while(rev > 0) {
+                digit = rev % 10;
+                if(digit == 2 || digit == 3 || digit == 5 || digit == 7) {
+                    System.out.print(digit + " ");
+                }
+                rev = rev / 10;
+            }
+        
+    }
+}
